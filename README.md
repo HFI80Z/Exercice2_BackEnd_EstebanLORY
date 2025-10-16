@@ -122,11 +122,3 @@ curl -X DELETE http://localhost:3000/tasks/1
   "message": "Task deleted"
 }
 ```
-
----
-
-## - Notes
-
-- Les tâches sont **stockées en mémoire** (elles disparaissent quand le serveur redémarre).
-- Vous pouvez utiliser **curl**, **Postman** ou **Insomnia** pour tester les routes.
-- Le projet suit strictement l’architecture **MVC** et les consignes du **cours Exercice 2**.
