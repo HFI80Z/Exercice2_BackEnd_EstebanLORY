@@ -4,20 +4,20 @@ Création d'une API **Todolist** avec le framework **Express.js**, selon l'archi
 
 ---
 
-## 🚀 Installation et configuration
+##- Installation et configuration
 
-### 1️⃣ Cloner le projet
+###1. Cloner le projet
 ```bash
 git clone https://github.com/<ton-utilisateur>/Conception_BackEnd_Exo2.git
 cd Conception_BackEnd_Exo2
 ```
 
-### 2️⃣ Installer les dépendances
+###2. Installer les dépendances
 ```bash
 npm install
 ```
 
-### 3️⃣ Lancer le serveur
+###3. Lancer le serveur
 ```bash
 npm run dev
 ```
@@ -26,7 +26,7 @@ Le serveur démarre sur [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🧩 Structure du projet (MVC)
+##- Structure du projet (MVC)
 
 ```
 Conception_BackEnd_Exo2/
@@ -46,7 +46,7 @@ Conception_BackEnd_Exo2/
 
 ---
 
-## ⚙️ Dépendances
+##- Dépendances
 
 - **express** — serveur web
 - **cors** — gestion du CORS
@@ -55,17 +55,17 @@ Conception_BackEnd_Exo2/
 
 ---
 
-## 🧠 Fonctionnalités de l’API
+##- Fonctionnalités de l’API
 
-### ➕ Ajouter une tâche
+###+ Ajouter une tâche
 **POST** `/tasks`
 
-#### Exemple :
+####- Exemple :
 ```bash
 curl -X POST http://localhost:3000/tasks   -H "Content-Type: application/json"   -d '{"title": "Ma tâche", "description": "Description optionnelle"}'
 ```
 
-#### Réponse :
+####- Réponse :
 ```json
 {
   "success": true,
@@ -81,7 +81,7 @@ curl -X POST http://localhost:3000/tasks   -H "Content-Type: application/json"  
 
 ---
 
-### 📋 Voir toutes les tâches
+###- Voir toutes les tâches
 **GET** `/tasks`
 
 #### Exemple :
@@ -107,7 +107,7 @@ curl http://localhost:3000/tasks
 
 ---
 
-### ❌ Supprimer une tâche
+###x Supprimer une tâche
 **DELETE** `/tasks/:id`
 
 #### Exemple :
@@ -125,14 +125,8 @@ curl -X DELETE http://localhost:3000/tasks/1
 
 ---
 
-## 🧾 Notes
+##- Notes
 
 - Les tâches sont **stockées en mémoire** (elles disparaissent quand le serveur redémarre).
 - Vous pouvez utiliser **curl**, **Postman** ou **Insomnia** pour tester les routes.
 - Le projet suit strictement l’architecture **MVC** et les consignes du **cours Exercice 2**.
-
----
-
-## 👨‍💻 Auteur
-Projet réalisé dans le cadre du cours **Conception Backend — Exercice 2**  
-Développé avec ❤️ en JavaScript (Node.js / Express)
