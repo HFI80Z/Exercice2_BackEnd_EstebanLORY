@@ -8,7 +8,7 @@ Création d'une API **Todolist** avec le framework **Express.js**, selon l'archi
 
 ### 1. Cloner le projet
 ```bash
-git clone https://github.com/<ton-utilisateur>/Conception_BackEnd_Exo2.git
+git clone https://github.com/HFI80Z/Conception_BackEnd_Exo2.git
 cd Conception_BackEnd_Exo2
 ```
 
