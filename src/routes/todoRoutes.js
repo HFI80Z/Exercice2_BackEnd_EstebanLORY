@@ -3,8 +3,8 @@ import TodoController from "../controllers/todoController.js";
 
 const router = express.Router();
 
-router.get("/tasks", TodoController.list);
-router.post("/tasks", TodoController.add);
-router.delete("/tasks/:id", TodoController.delete);
+router.get("/", TodoController.list);
+router.post("/", TodoController.add);
+router.delete("/:id", TodoController.delete);
 
 export default router;

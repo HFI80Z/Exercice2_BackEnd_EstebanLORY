@@ -1,19 +1,21 @@
-export default class Task {
-  static idCounter = 1;
+import { pool } from "../config/db.js";
 
-  constructor(title, description = "") {
-    this.id = Task.idCounter++;
-    this.title = title;
-    this.description = description;
-    this.createdAt = new Date();
-  }
+const q = (text, params) => pool.query(text, params);
 
-  toJSON() {
-    return {
-      id: this.id,
-      title: this.title,
-      description: this.description,
-      createdAt: this.createdAt.toISOString()
-    };
-  }
+export async function getAllTodos() {
+  const { rows } = await q("SELECT id, title, done, created_at FROM todos ORDER BY id DESC");
+  return rows;
+}
+
+export async function addTodo(title) {
+  const { rows } = await q(
+    "INSERT INTO todos (title) VALUES ($1) RETURNING id, title, done, created_at",
+    [title]
+  );
+  return rows[0];
+}
+
+export async function deleteTodo(id) {
+  const { rowCount } = await q("DELETE FROM todos WHERE id = $1", [id]);
+  return rowCount > 0;
 }
